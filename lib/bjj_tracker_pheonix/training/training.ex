@@ -17,7 +17,8 @@ defmodule BjjTrackerPheonix.Training do
 
   def create_journal(user_id, attrs) do
     %TrainingJournal{}
-    |> TrainingJournal.changeset(Map.put(attrs, "user_id", user_id))
+    |> TrainingJournal.changeset(attrs)
+    |> Ecto.Changeset.put_change(:user_id, user_id)
     |> Repo.insert()
   end
 

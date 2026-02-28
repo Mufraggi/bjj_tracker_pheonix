@@ -38,9 +38,9 @@ defmodule BjjTrackerPheonix.Training.TrainingJournal do
       :date, :session_type, :duration, :energy, :mental, :sleep,
       :pain_level, :pain_zone, :positions, :technique_types,
       :technique_free_text, :what_worked, :what_didnt_work,
-      :sparring, :fatigue, :mood, :notes, :user_id
+      :sparring, :fatigue, :mood, :notes
     ])
-    |> validate_required([:date, :session_type, :duration, :user_id])
+    |> validate_required([:date, :session_type, :duration])
     |> validate_inclusion(:session_type, @valid_session_types)
     |> validate_inclusion(:pain_level, @valid_pain_levels)
     |> validate_number(:duration, greater_than: 0)

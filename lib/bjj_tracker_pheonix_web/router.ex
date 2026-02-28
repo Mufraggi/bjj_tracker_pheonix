@@ -22,7 +22,7 @@ defmodule BjjTrackerPheonixWeb.Router do
 
   scope "/api", BjjTrackerPheonixWeb do
     pipe_through [:api, :auth]
-    resources "/journals", TrainingJournalController, except: [:new, :edit]
+    resources "/journals", tu , except: [:new, :edit]
 
 
     # routes protégées à venir
